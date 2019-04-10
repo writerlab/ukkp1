@@ -12,4 +12,4 @@ Uji Kompetensi Keahlian RPL Paket 1. 2018/2019. K-13.
 - [x] Otoritas/Hak akses
 - [x] Masakan
 - [x] Order
-- [ ] Transaksi
+- [x] Transaksi
