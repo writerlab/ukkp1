@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="jumbotron text-center">
+            <h1>REST-U.</h1>
+          </div>
+        </div>
+      </div>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="card">
+          <div class="card-header">
+            PILIH PAKET MAKANAN
+          </div>
+          <div class="card-body">
+            <form action="" method="post">
+              <div class="form-group">
+                <input type="radio" name="id_masakan" value="1" id="1">
+                <label for="1">PAKET 1: Nasi, Tempe, Tahu, Teh</label>
+                <div>IDR 10000</div>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="id_masakan" value="2" id="2">
+                <label for="2">PAKET 1: Nasi, Tempe, Tahu, Jus Jambu</label>
+                <div>IDR 11000</div>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="id_masakan" value="3" id="3">
+                <label for="3">PAKET 1: Nasi, Tempe, Tahu, Air Jamjam</label>
+                <div>IDR 12000</div>
+              </div>
+              <button type="submit" class="btn btn-primary" name="order">Order</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="jumbotron">
+          <h3>Daftar Pesanan</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>NO.</th>
+                <th>NAMA PAKET</th>
+                <th>STATUS</th>
+                <th>HARGA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.</td>
+                <td>PAKET 1: ...</td>
+                <td><div class="badge badge-danger">Dipesan</div></td>
+                <td>10000</td>
+              </tr>
+              <tr>
+                <td colspan="4" class="text-right">Jumlah: IDR 10000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

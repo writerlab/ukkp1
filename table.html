@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+        <div class="col">
+        <div class="jumbotron text-center">
+          <h1>REST-U.</h1>
+        </div>
+      </div>
+      </div>
+
+    <div class="row">
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            MENU
+          </div>
+          <div class="card-body">
+            <ul>
+              <li><a href="?menu=masakan">Masakan</a></li>
+              <li><a href="?menu=order">Order</a></li>
+              <li><a href="?menu=transaksi">Transaksi</a></li>
+              <li><a href="?menu=keluar">Keluar</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>  
+
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            Data masakan
+            <a href="?menu=tambah-masakan" class="btn btn-primary">Tambah</a>
+          </div>
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>NO.</th>
+                  <th>NAMA MASAKAN</th>
+                  <th>HARGA (IDR)</th>
+                  <th>STATUS</th>
+                  <th>AKSI</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>PAKET 1: Nasi, Tempe, Tahu, Teh</td>
+                  <td>9000</td>
+                  <td><div class="badge badge-succes">Tersedia</div></td>
+                  <td>
+                    <a href="#">Ubah</a> - 
+                    <a href="#">Hapu</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
