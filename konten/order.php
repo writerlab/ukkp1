@@ -5,6 +5,7 @@ if (isset($_POST['order'])) {
   $id_user = $_SESSION['id_user'];
   $keterangan = $_POST['keterangan'];
 
+  // INSERT PESANAN
   $q_order = mysqli_query($konek, "insert into pesanan values (
       NULL,
       '$nama_meja',
@@ -14,11 +15,13 @@ if (isset($_POST['order'])) {
       true
     )");
 
+  // AMBIL id_order dan harga dari tabel pesanan yang baru saja di-insert
   $get_id_order = mysqli_query($konek, "select * from pesanan order by id_order desc limit 1");
   $pesanan = mysqli_fetch_assoc($get_id_order);
   $id_pesanan = $pesanan['id_order'];
   $harga = $pesanan['harga'];
 
+  // INSERT detil_order
   $q_detil_order = mysqli_query($konek, "insert into detil_order values (
     NULL,
     '$id_pesanan',
@@ -27,6 +30,7 @@ if (isset($_POST['order'])) {
     true
     )");
 
+  // Ambil id_masakan dari detil_order yang baru saja di insert :D
   $get_id_detilorder = mysqli_query($konek, "select * from detil_order order by id_detil_order desc limit 1");
   $detil_order = mysqli_fetch_assoc($get_id_detilorder);
   $id_masakan = $detil_order['id_masakan'];
@@ -37,6 +41,8 @@ if (isset($_POST['order'])) {
   $id_masakan = mysqli_fetch_assoc($get_id_masakan);
   $harga = $id_masakan['harga'];
 
+  // BUATKAN TRANSAKSI SETELAH MELAKUKAN ORDER
+  // INSERT transaksi -__-
     $q_transaksi = mysqli_query($konek, "insert into transaksi values (
     NULL,
     '$id_user',
