@@ -1,5 +1,5 @@
 # UKK Paket 1
-Uji Kompetensi Keahlian RPL Paket 1. 2018/2019. K-13.
+Uji Kompetensi Keahlian RPL Paket 1: Aplikasi Kasir Restoran. 2018/2019. K-13.
 
 # Timeline
 - [x] Analisis
