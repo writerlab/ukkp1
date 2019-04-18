@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 11, 2019 at 11:22 AM
+-- Generation Time: Apr 18, 2019 at 04:26 AM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.30
 
@@ -35,13 +35,6 @@ CREATE TABLE `detil_order` (
   `keterangan` text,
   `status_detil_order` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `detil_order`
---
-
-INSERT INTO `detil_order` (`id_detil_order`, `id_order`, `id_masakan`, `keterangan`, `status_detil_order`) VALUES
-(1, 1, 2, 'ga pake lama', 1);
 
 -- --------------------------------------------------------
 
@@ -84,7 +77,8 @@ CREATE TABLE `masakan` (
 
 INSERT INTO `masakan` (`id_masakan`, `nama_masakan`, `harga`, `status_masakan`) VALUES
 (1, 'PAKET 1: Nasi, Tempe, Tahu, Teh Manis', 10000, 'Tersedia'),
-(2, 'PAKET 2: Nasi T.O., Tempe, Tahu, Milk Shake', 21000, 'Tersedia');
+(2, 'PAKET 2: Nasi T.O., Tempe, Tahu, Milk Shake', 21000, 'Tersedia'),
+(3, 'PAKET 1: Nasi Goreng, Baso Goreng, Red Velvet', 37500, 'Tersedia');
 
 -- --------------------------------------------------------
 
@@ -101,13 +95,6 @@ CREATE TABLE `pesanan` (
   `status_order` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `pesanan`
---
-
-INSERT INTO `pesanan` (`id_order`, `no_meja`, `tanggal`, `id_user`, `keterangan`, `status_order`) VALUES
-(1, 'Meja 1', '2019-04-09', 1, 'ga pake lama', 0);
-
 -- --------------------------------------------------------
 
 --
@@ -121,13 +108,6 @@ CREATE TABLE `transaksi` (
   `tanggal` date DEFAULT NULL,
   `total_bayar` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `transaksi`
---
-
-INSERT INTO `transaksi` (`id_transaksi`, `id_user`, `id_order`, `tanggal`, `total_bayar`) VALUES
-(1, 1, 1, '2019-04-09', 21000);
 
 -- --------------------------------------------------------
 
@@ -199,7 +179,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `detil_order`
 --
 ALTER TABLE `detil_order`
-  MODIFY `id_detil_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_detil_order` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `level`
@@ -211,19 +191,19 @@ ALTER TABLE `level`
 -- AUTO_INCREMENT for table `masakan`
 --
 ALTER TABLE `masakan`
-  MODIFY `id_masakan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_masakan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pesanan`
 --
 ALTER TABLE `pesanan`
-  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
