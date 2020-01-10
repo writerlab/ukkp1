@@ -16,5 +16,5 @@ elseif ($_GET['menu'] == 'transaksi') {
 }
 elseif ($_GET['menu'] == 'keluar') {
   session_destroy();
-  header('Location: index.php');
+  print "<meta http-equiv='refresh' content='0; index.php'>";
 }

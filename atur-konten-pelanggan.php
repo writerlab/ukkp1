@@ -4,5 +4,5 @@ if ($_GET['menu'] == 'order' || empty($_GET['menu'])) {
 }
 elseif ($_GET['menu'] == 'keluar') {
   session_destroy();
-  header('Location: index.php');
+  print "<meta http-equiv='refresh' content='0; index.php'>";
 }
