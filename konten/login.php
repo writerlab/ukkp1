@@ -14,7 +14,7 @@ if (isset($_POST['masuk'])) {
     $_SESSION['nama_user'] = $sesi['nama_user'];
     $_SESSION['id_level'] = $sesi['id_level'];
 
-    header('Location: index.php');
+    print "<meta http-equiv='refresh' content='0; index.php'>";
   } else {
     $pesan = "<div class='alert alert-danger'>Login gagal!</div>";
   }
